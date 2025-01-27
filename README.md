@@ -15,4 +15,4 @@
 - 240px width
 
 ## Credits
-- code for displaying bitmaps is based on work of `Rarday` on adafruit forum ([link](https://forums.adafruit.com/viewtopic.php?t=141979)) but with slight modifications so it works
+- code for displaying bitmaps is based on [work of](https://forums.adafruit.com/viewtopic.php?t=141979) `Rarday` on adafruit forum but with slight modifications so it works
