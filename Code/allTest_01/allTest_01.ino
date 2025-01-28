@@ -16,6 +16,7 @@
 #include <ESP8266WiFi.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
+#include "images.h"
 
 //=== Defining pins ===
 #define TFT_DC 21
@@ -46,9 +47,14 @@ bool sdInitialized = false;
 //---- Time variables ----
 const char *ssid     = "UPC0520860";
 const char *password = "Ae8kdjbmaerx";
+String timeDate[3] = {"", "", ""};
+int dayLightSaving = 0;
 //
 //---- Screen variables ----
-currentScreen = 0;
+int currentScreen = 0;
+//
+//---- Delay variables ----
+long timeRefreshMainMenu = 0, timeRefreshOtsi = 0;
 
 //==--==--==--== SETUP FUNCTION ==--==--==--==
 void setup(void) {
@@ -57,6 +63,8 @@ void setup(void) {
     
     //=== Beginning TFT ===
     tft.begin();
+    tft.fillScreen(ILI9341_BLACK);
+    tft.setRotation(2);
     yield();
 
     //=== SD card setup ===
@@ -83,18 +91,12 @@ void setup(void) {
         Serial.print(".");
     }
     timeClient.begin();
-    
 }
 
 //==--==--==--== LOOP FUNCTION ==--==--==--==
 void loop() {
-    /* PRINTING FIRST IMAGE
-    tft.setRotation(2);
-    bmpDraw("/1.bmp", 0, 0);
-    */
-    
-    
-    String test = convertTime2String(3600);
-    Serial.println(test);
-    delay(1000);
+    if(currentScreen == 0) homeScreen();
+    else if(currentScreen == 1) photoFrameScreen();
 }
+
+

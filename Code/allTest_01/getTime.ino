@@ -1,7 +1,7 @@
-String convertTime2String(int timeOffs){
+void convertTime2String(int timeOffs){
     //=== Declarations of variables ===
-    String weekDays[7]={"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-    String timeString, dateString, wholeString, hString, mString, sString;
+    String weekDays[7]={" Sunday  ", " Monday  ", " Tuesday ", "Wednesday", "Thursday ", " Friday  ", "Saturday "};
+    String timeString, dateString, wholeString, hString, mString, sString, mmdString, mmString;
 
     //=== Get time ===
     timeClient.setTimeOffset(timeOffs);
@@ -25,12 +25,19 @@ String convertTime2String(int timeOffs){
     else mString = String(m);
     if(s <= 9) sString = "0" + String(s);
     else sString = String(s);
+    if(mmd <= 9) mmdString = "0" + String(mmd);
+    else mmdString = String(mmd);
+    if(mm <= 9) mmString = "0" + String(mm);
+    else mmString = String(mm);
+
 
     //=== Creating final string ===
     timeString = hString + ":" + mString + ":" + sString;
-    dateString = String(mmd) + "." + String(mm) + "." + String(y);
-    wholeString = timeString + " on " + weekDays[d] + ", " + dateString;
+    dateString = mmdString + "." + mmString + "." + String(y);
+    //wholeString = timeString + " on " + weekDays[d] + ", " + dateString;
 
     //=== Returning time and date ===
-    return wholeString;
+    timeDate[0] = timeString;
+    timeDate[1] = dateString;
+    timeDate[2] = weekDays[d];
 }
