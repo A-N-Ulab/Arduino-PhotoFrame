@@ -41,3 +41,12 @@ void convertTime2String(int timeOffs){
     timeDate[1] = dateString;
     timeDate[2] = weekDays[d];
 }
+
+int getJustDay(int timeOffs){
+    timeClient.setTimeOffset(timeOffs);
+    timeClient.update();
+    time_t epochTime = timeClient.getEpochTime();
+    struct tm *ptm = gmtime ((time_t *)&epochTime); 
+    int mmd = ptm->tm_mday;
+    return mmd;
+}

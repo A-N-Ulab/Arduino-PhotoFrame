@@ -17,6 +17,7 @@
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 #include "images.h"
+#include <dht11.h>
 
 //=== Defining pins ===
 #define TFT_DC 21
@@ -26,6 +27,7 @@
 #define SD_MOSI 15
 #define SD_CS 13
 #define SD_SCK 14
+#define DHT11PIN 5
 
 //=== Defining colors ===
 #define BLACK 0x0000
@@ -39,6 +41,8 @@ File root;
 //---- WiFi Time ----
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org");
+//---- DHT11 ----
+dht11 DHT11;
 
 //=== Defining global variables ===
 //---- SD card variables ----
@@ -52,6 +56,7 @@ int dayLightSaving = 0;
 //
 //---- Screen variables ----
 int currentScreen = 0;
+bool drawText = false;
 //
 //---- Delay variables ----
 long timeRefreshMainMenu = 0, timeRefreshOtsi = 0;
