@@ -1,6 +1,9 @@
 # PhotoFrame
 ## Repo structure
 ```
+- Cad files
+  |- step
+  |- STL
 - Code
   |- allTest_01
   |- test programs
@@ -8,6 +11,7 @@
   |- Otsi
 - Photos to SD
 ```
+- `Cad files` - folder containing step models, STL meshes and freecad project
 - `Code` - folder containing test programs for the whole photoframe and test program used to test individual components
 - `Graphics` - folder containing all graphics, including 240x120px Otsi
 - `Photos to SD` - folder containing bitmaps of all photos that are gonna be displayed
