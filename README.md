@@ -2,6 +2,7 @@
 ## Repo structure
 ```
 - Cad files
+  |- freecad
   |- step
   |- STL
 - Code
