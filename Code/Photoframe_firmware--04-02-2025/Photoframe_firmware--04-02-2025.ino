@@ -6,6 +6,7 @@
  |
  |Change log:
  | - Created this file - 27.01.2025 Szymon Glinka
+ | - Fully working code - 04.02.2025 Szymon Glinka
 */
 
 //=== Importing libraries ===
@@ -54,9 +55,6 @@ dht11 DHT11;
 //=== Defining global variables ===
 //---- SD card variables ----
 bool sdInitialized = false;
-String rawFromSD = "";
-String currentAndTotalPhotos[2] = {"", "100"};
-String strToWrite = "";
 //
 //---- Time variables ----
 const char *ssid     = "UPC0520860";
@@ -67,6 +65,7 @@ int dayLightSaving = 0;
 //---- Screen variables ----
 int currentScreen = 0;
 bool drawText = false;
+bool displayedBit = false;
 //
 //---- Delay variables ----
 long timeRefreshMainMenu = 0, timeRefreshOtsi = 0, timeBackToMenu = 0;
