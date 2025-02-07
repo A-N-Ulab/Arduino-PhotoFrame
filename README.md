@@ -1,7 +1,11 @@
 # PhotoFrame
+## Code
+The lates working code is `Photoframe_firmware--04-02-2025` located in `code` folder
+
 ## Repo structure
 ```
 - Cad files
+  |- Assembly
   |- freecad
   |- step
   |- STL
@@ -13,7 +17,7 @@
   |- Otsi
 - Photos to SD
 ```
-- `Cad files` - folder containing step models, STL meshes and freecad project
+- `Cad files` - folder containing step models, STL meshes and freecad project. Also contains folder with freecad assembly - [A2plus](https://github.com/kbwbe/A2plus)
 - `Code` - folder containing test programs for the whole photoframe program used to test individual components as well as completed code
 - `Graphics` - folder containing all graphics, including 240x120px Otsi
 - `Photos to SD` - folder containing bitmaps of all photos that are gonna be displayed
