@@ -1,6 +1,7 @@
 # PhotoFrame
 ## Code
 The lates working code is `Photoframe_firmware--04-02-2025` located in `code` folder
+**IMPORTANT!** for this code to compile you will have to copy library from `Code/library for dht11` to your Arduino library folder
 
 ## Repo structure
 ```
@@ -11,6 +12,7 @@ The lates working code is `Photoframe_firmware--04-02-2025` located in `code` fo
   |- STL
 - Code
   |- allTest_01
+  |- library for dht11
   |- Photoframe_firmware--04-02-2025
   |- test programs
 - Graphics
@@ -18,7 +20,7 @@ The lates working code is `Photoframe_firmware--04-02-2025` located in `code` fo
 - Photos to SD
 ```
 - `Cad files` - folder containing step models, STL meshes and freecad project. Also contains folder with freecad assembly - [A2plus](https://github.com/kbwbe/A2plus)
-- `Code` - folder containing test programs for the whole photoframe program used to test individual components as well as completed code
+- `Code` - folder containing test programs for the whole photoframe program used to test individual components as well as completed code. Contains library for dht11 sensor
 - `Graphics` - folder containing all graphics, including 240x120px Otsi
 - `Photos to SD` - folder containing bitmaps of all photos that are gonna be displayed
 
