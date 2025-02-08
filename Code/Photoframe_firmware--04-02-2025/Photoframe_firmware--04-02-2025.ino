@@ -73,7 +73,7 @@ long timeRefreshMainMenu = 0, timeRefreshOtsi = 0, timeBackToMenu = 0;
 //---- EEPROM----
 int dstOffset = 1; //*3600
 int lastDay = 1, currentPhoto = 1;
-int totalPhotos = 2;
+int totalPhotos = 100;
 int firstBoot = 0;
 //
 //---- Button ----
