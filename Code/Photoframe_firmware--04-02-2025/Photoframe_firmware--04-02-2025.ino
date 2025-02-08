@@ -57,8 +57,8 @@ dht11 DHT11;
 bool sdInitialized = false;
 //
 //---- Time variables ----
-const char *ssid     = "UPC0520860";
-const char *password = "Ae8kdjbmaerx";
+const char *ssid     = "YOUR SSID";
+const char *password = "YOUR PASSWORD";
 String timeDate[3] = {"", "", ""};
 int dayLightSaving = 0;
 //
