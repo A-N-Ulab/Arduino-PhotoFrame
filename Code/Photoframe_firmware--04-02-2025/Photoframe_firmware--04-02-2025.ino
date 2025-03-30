@@ -57,8 +57,8 @@ dht11 DHT11;
 bool sdInitialized = false;
 //
 //---- Time variables ----
-const char *ssid     = "YOUR SSID";
-const char *password = "YOUR PASSWORD";
+const char *ssid     = "UPC0520860";
+const char *password = "Ae8kdjbmaerx";
 String timeDate[3] = {"", "", ""};
 int dayLightSaving = 0;
 //
@@ -142,7 +142,7 @@ void setup(void) {
 //==--==--==--== LOOP FUNCTION ==--==--==--==
 void loop() {
     //=== Calculating dayLight saving time ===
-    dayLightSaving = 3600*dstOffset;
+    dayLightSaving = 3600*dstOffset + 3600;
     
     //=== Screens ===
     if(currentScreen == 0) homeScreen();

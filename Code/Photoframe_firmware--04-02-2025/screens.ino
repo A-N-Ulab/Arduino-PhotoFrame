@@ -1,6 +1,7 @@
 void homeScreen(){
     //=== Variables ===
     String temp, humid;
+    float tempC;
     
     //=== Home screen - time, date, temp, etc. ===
     if((millis() >= timeRefreshMainMenu + 1000)){
@@ -26,7 +27,8 @@ void homeScreen(){
         int dhtReading = DHT11.read(DHT11PIN);
         //
         //---- Convert data to strings ----
-        temp = String((float)DHT11.temperature, 0) + "'C";
+        tempC = analogReadTemp();
+        temp = String((float)tempC, 0) + "'C";
         humid = String((float)DHT11.humidity, 0) + "%";
         //
         //---- Print temp and humid to tft ----
